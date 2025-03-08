@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Roboto } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { useState } from "react";
+import LetterFrequencyAnalyzer from "./component/frequencyAnalyser/frequencyAnalyser";
 
 const RobotoSans = Roboto({
   variable: "--font-roboto",
@@ -9,45 +8,6 @@ const RobotoSans = Roboto({
 });
 
 export default function Home() {
-  const [input, setInput] = useState('');
-  const [result, setResult] = useState([]);
-  const [error, setError] = useState('');
-
-  const handleInputChange = (e) => {
-    setInput(e.target.value);
-    setError('');
-  };
-
-  const calculateFrequency = () => {
-    if (!input.trim()) {
-      setError('Por favor, insira uma cadeia de caracteres.');
-      return;
-    }
-
-    const cleanedInput = input.replace(/[^a-zA-Z]/g, '').toLowerCase();
-
-    if (!cleanedInput) {
-      setError('A cadeia de caracteres não contém letras válidas (A-Z).');
-      return;
-    }
-
-    const frequencyMap = {};
-
-    for (let char of cleanedInput) {
-      frequencyMap[char] = (frequencyMap[char] || 0) + 1;
-    }
-
-    const frequencyArray = Object.keys(frequencyMap).map((char) => ({
-      char,
-      frequency: ((frequencyMap[char] / cleanedInput.length) * 100).toFixed(2),
-    }));
-
-    frequencyArray.sort((a, b) => b.frequency - a.frequency);
-
-    setResult(frequencyArray);
-    setError('');
-  };
-
   return (
     <>
       <Head>
@@ -57,8 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={`${styles.page} ${RobotoSans.variable}`}>
-        <div></div>
+      <div className={`${RobotoSans.variable}`}>
+        <LetterFrequencyAnalyzer />
       </div>
     </>
   );
