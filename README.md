@@ -44,6 +44,12 @@ O Analisador de Frequência de Letras é uma aplicação desenvolvida em **React
 
 ## 🖥️ Como Executar?
 
+Você pode executar o projeto clicando no link abaixo
+
+https://teste-2-transdata.vercel.app/
+
+**OU**
+
 ### 1. Clonar o repositório
 
 Para começar, clone este repositório em sua máquina local:
