@@ -13,20 +13,115 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
   margin: 0;
 }
 
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+h2 {
+  color: var(--secondary-color);
+  text-shadow: 0 8px 10px var(--tertiary-color);
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--secondary-color);
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: var(--tertiary-color);
+}
+
+textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px var(--secondary-color);
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(
+    45deg,
+    var(--tertiary-color),
+    var(--secondary-color)
+  );
+  color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--tertiary-color)
+  );
+  box-shadow: 0 0 10px var(--secondary-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 15px 0;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
 
 @media (prefers-color-scheme: dark) {
   html {
