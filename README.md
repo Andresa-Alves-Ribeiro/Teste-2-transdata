@@ -14,6 +14,8 @@
 
 ## Demonstração
 
+![Captura de tela 2025-03-09 034346](https://github.com/user-attachments/assets/26021216-748b-47fd-98d1-485cbaca49e4)
+
 <a id="descricao"></a>
 
 ## Descrição
@@ -89,7 +91,7 @@ Acesse a aplicação em http://localhost:3000
 
 ## 🦸 Contato
 
-- Autor: Andresa A Ribeiro
+- Autora: Andresa A Ribeiro
 - E-mail: andresa_15ga@hotmail.com
 - LinkedIn: http://linkedin.com/in/andresa-alves-ribeiro
 
